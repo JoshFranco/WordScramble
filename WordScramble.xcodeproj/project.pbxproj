@@ -15,6 +15,7 @@
 		DA1047DC2469E32F0058E368 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA1047DB2469E32F0058E368 /* Preview Assets.xcassets */; };
 		DA1047DF2469E32F0058E368 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA1047DD2469E32F0058E368 /* LaunchScreen.storyboard */; };
 		DA1047EA2469E32F0058E368 /* WordScrambleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1047E92469E32F0058E368 /* WordScrambleTests.swift */; };
+		DAB29851246B2F9D00AF5DED /* start.txt in Resources */ = {isa = PBXBuildFile; fileRef = DAB29850246B2F9D00AF5DED /* start.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		DA1047E52469E32F0058E368 /* WordScrambleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordScrambleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA1047E92469E32F0058E368 /* WordScrambleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordScrambleTests.swift; sourceTree = "<group>"; };
 		DA1047EB2469E32F0058E368 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAB29850246B2F9D00AF5DED /* start.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = start.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 			children = (
 				DA1047DA2469E32F0058E368 /* Preview Content */,
 				DA1047D82469E32F0058E368 /* Assets.xcassets */,
+				DAB29850246B2F9D00AF5DED /* start.txt */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA1047DF2469E32F0058E368 /* LaunchScreen.storyboard in Resources */,
+				DAB29851246B2F9D00AF5DED /* start.txt in Resources */,
 				DA1047DC2469E32F0058E368 /* Preview Assets.xcassets in Resources */,
 				DA1047D92469E32F0058E368 /* Assets.xcassets in Resources */,
 			);
