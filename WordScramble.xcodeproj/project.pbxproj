@@ -81,14 +81,12 @@
 		DA1047CE2469E32E0058E368 /* WordScramble */ = {
 			isa = PBXGroup;
 			children = (
+				DAE24143246B1CED00E79BCB /* Resources */,
+				DAE24142246B1CDF00E79BCB /* DataLayer */,
+				DAE24141246B1CC200E79BCB /* ViewLayer */,
 				DA1047CF2469E32E0058E368 /* AppDelegate.swift */,
 				DA1047D12469E32F0058E368 /* SceneDelegate.swift */,
-				DA1047D62469E32F0058E368 /* ContentView.swift */,
-				DA1047D82469E32F0058E368 /* Assets.xcassets */,
-				DA1047DD2469E32F0058E368 /* LaunchScreen.storyboard */,
 				DA1047E02469E32F0058E368 /* Info.plist */,
-				DA1047D32469E32F0058E368 /* WordScramble.xcdatamodeld */,
-				DA1047DA2469E32F0058E368 /* Preview Content */,
 			);
 			path = WordScramble;
 			sourceTree = "<group>";
@@ -108,6 +106,32 @@
 				DA1047EB2469E32F0058E368 /* Info.plist */,
 			);
 			path = WordScrambleTests;
+			sourceTree = "<group>";
+		};
+		DAE24141246B1CC200E79BCB /* ViewLayer */ = {
+			isa = PBXGroup;
+			children = (
+				DA1047D62469E32F0058E368 /* ContentView.swift */,
+				DA1047DD2469E32F0058E368 /* LaunchScreen.storyboard */,
+			);
+			path = ViewLayer;
+			sourceTree = "<group>";
+		};
+		DAE24142246B1CDF00E79BCB /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+				DA1047D32469E32F0058E368 /* WordScramble.xcdatamodeld */,
+			);
+			path = DataLayer;
+			sourceTree = "<group>";
+		};
+		DAE24143246B1CED00E79BCB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DA1047DA2469E32F0058E368 /* Preview Content */,
+				DA1047D82469E32F0058E368 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,7 +391,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"WordScramble/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"WordScramble/Resources/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = WordScramble/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -386,7 +410,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"WordScramble/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"WordScramble/Resources/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = WordScramble/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
