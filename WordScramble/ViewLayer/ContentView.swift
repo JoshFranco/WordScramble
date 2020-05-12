@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var usedWords: [String] = []
+    @State private var currentScore = 0
     @State private var rootWord = ""
     @State private var newWord = ""
     
@@ -30,8 +31,15 @@ struct ContentView: View {
                     Image(systemName: "\(word.count).circle")
                     Text(word.capitalized)
                 }
+                
+                Text("Your score is: \(currentScore)")
             }
             .navigationBarTitle(rootWord)
+            .navigationBarItems(trailing:
+                Button(action: startGame, label: {
+                    Text("Restart")
+                })
+            )
             .onAppear(perform: startGame)
             .alert(isPresented: $showingError) {
                 Alert(title: Text(errorTitle),
@@ -53,6 +61,9 @@ private extension ContentView {
         
         let allWords = startWords.components(separatedBy: "\n")
         self.rootWord = allWords.randomElement()?.capitalized ?? "Mug"
+        self.usedWords.removeAll()
+        self.currentScore = 0
+        self.newWord = ""
     }
     
     func addNewWord() {
@@ -61,21 +72,41 @@ private extension ContentView {
         
         guard isOriginal(word: answer) else {
             wordError(using: "Word used already", msg: "Be more original...")
+            decrimentScore()
             return
         }
         
         guard isPossible(word: answer) else {
             wordError(using: "Word not recognized", msg: "You can't just make them up, ya know!")
+            decrimentScore()
             return
         }
         
         guard isReal(word: answer) else {
             wordError(using: "Word not possible", msg: "That isn't a real word?!")
+            decrimentScore()
+            return
+        }
+        
+        guard answer.count >= 3 else {
+            wordError(using: "Word is only \(answer.count) \(answer.count == 1 ? "letter" : "letters") long", msg: "Word needs to be longer than 2 letters, no cheating")
+            return
+        }
+        
+        guard answer.lowercased() != rootWord.lowercased() else {
+            wordError(using: "Can't use the root word", msg: "Try words within the root word \(rootWord.capitalized)")
             return
         }
         
         usedWords.insert(answer, at: 0)
+        currentScore += 1
         newWord = ""
+    }
+    
+    func decrimentScore() {
+        if currentScore > 0 {
+            currentScore -= 1
+        }
     }
     
     func isOriginal(word: String) -> Bool {
